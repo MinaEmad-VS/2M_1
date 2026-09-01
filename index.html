@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2M for Treatment and Painting — Steel Surface Treatment &amp; Powder Coating</title>
+<meta name="description" content="2M for Treatment and Painting: sandblasting, priming and electrostatic powder coating for steel fabrication.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414;
+  --charcoal:#1c1c1d;
+  --steel:#3a3a3d;
+  --steel-light:#6b6b6e;
+  --paper:#f2ede3;
+  --red:#b8291a;
+  --red-deep:#8f1f14;
+  --gold:#a8813f;
+  --line: rgba(242,237,227,0.14);
+  --line-dark: rgba(20,20,20,0.12);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.01em;
+  margin:0;
+}
+a{color:inherit;}
+img{display:block;max-width:100%;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;
+  background:linear-gradient(180deg, rgba(20,20,20,0.75), rgba(20,20,20,0));
+  transition:background .3s ease, padding .3s ease;
+}
+.nav.solid{
+  background:var(--charcoal);
+  padding:10px 24px;
+  box-shadow:0 1px 0 var(--line);
+}
+.nav .logo-mark{height:34px;width:auto;filter:brightness(0) invert(1);}
+.nav .logo-mark{height:36px;}
+.nav-cta{
+  display:flex;gap:10px;align-items:center;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  padding:10px 18px;border-radius:2px;
+  text-decoration:none;white-space:nowrap;
+  border:1px solid transparent;
+  cursor:pointer;
+}
+.btn-primary{background:var(--red);color:#fff;}
+.btn-primary:hover{background:var(--red-deep);}
+.btn-ghost{border-color:rgba(242,237,227,0.5);color:var(--paper);}
+.btn-ghost:hover{border-color:var(--paper);background:rgba(242,237,227,0.08);}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;align-items:flex-end;
+  color:var(--paper);
+  background:#111;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:var(--hero-img);
+  background-size:cover;background-position:center 30%;
+  filter:grayscale(15%) contrast(1.05);
+  transform:scale(1.03);
+}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.35) 32%, rgba(14,14,14,0.88) 100%),
+    linear-gradient(90deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.05) 55%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  padding:160px 24px 64px;
+  width:100%;
+}
+.eyebrow-line{
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;color:var(--paper);opacity:.75;
+  margin-bottom:18px;
+  font-family:'Inter',sans-serif;
+  letter-spacing:.02em;
+}
+.eyebrow-line .rule{width:36px;height:1px;background:var(--red);}
+.hero h1{
+  font-size:clamp(38px, 7.2vw, 82px);
+  line-height:0.98;
+  font-weight:600;
+  max-width:14ch;
+}
+.hero h1 em{
+  font-style:normal;color:var(--red);
+}
+.hero p.lede{
+  font-family:'Inter',sans-serif;
+  font-size:clamp(15px,2vw,18px);
+  line-height:1.55;
+  max-width:46ch;
+  margin-top:22px;
+  color:rgba(242,237,227,0.88);
+  font-weight:400;
+}
+.hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+.hero-meta{
+  margin-top:56px;
+  display:flex;gap:36px;flex-wrap:wrap;
+  border-top:1px solid var(--line);
+  padding-top:20px;
+  max-width:720px;
+}
+.hero-meta div{font-size:13px;color:rgba(242,237,227,0.65);}
+.hero-meta strong{
+  display:block;font-family:'Oswald',sans-serif;font-size:22px;
+  color:var(--paper);text-transform:none;font-weight:500;
+}
+
+/* ---------- SECTION LABEL ---------- */
+.section{padding:88px 0;}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:24px;margin-bottom:40px;flex-wrap:wrap;
+}
+.section-head h2{
+  font-size:clamp(28px,4vw,42px);
+  font-weight:600;
+  max-width:16ch;
+}
+.section-head p{
+  font-family:'Inter',sans-serif;color:var(--steel-light);
+  max-width:38ch;font-size:15px;line-height:1.6;margin:0;
+}
+
+/* ---------- CAROUSEL ---------- */
+.carousel-section{background:var(--charcoal);color:var(--paper);padding:80px 0 88px;}
+.carousel-section .section-head p{color:rgba(242,237,227,0.62);}
+.carousel-section .section-head h2{color:var(--paper);}
+.carousel-outer{position:relative;}
+.carousel{
+  display:flex;gap:16px;overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:4px 24px 8px;
+  margin:0 -24px;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  cursor:grab;
+}
+.carousel:active{cursor:grabbing;}
+.carousel::-webkit-scrollbar{display:none;}
+.slide{
+  position:relative;
+  flex:0 0 auto;
+  width:min(74vw, 340px);
+  aspect-ratio:3/4;
+  scroll-snap-align:start;
+  border-radius:2px;
+  overflow:hidden;
+  background:#000;
+}
+.slide img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
+  user-select:none;-webkit-user-drag:none;
+}
+.slide:hover img{transform:scale(1.045);}
+.slide-cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:14px 16px 12px;
+  background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72));
+  font-family:'Inter',sans-serif;font-size:13px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:8px;
+}
+.slide-cap .idx{font-family:'Oswald',sans-serif;color:var(--gold);font-size:13px;}
+.carousel-controls{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:22px;
+}
+.dots{display:flex;gap:8px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(242,237,227,0.28);transition:all .25s ease;}
+.dot.active{background:var(--red);width:20px;border-radius:3px;}
+.arrows{display:flex;gap:10px;}
+.arrow-btn{
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(242,237,227,0.3);
+  background:transparent;color:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .2s ease;
+}
+.arrow-btn:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+.arrow-btn svg{width:18px;height:18px;}
+
+/* ---------- PROCESS ---------- */
+.process-list{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line-dark);
+}
+.process-item{
+  padding:28px 20px 28px 0;
+  border-right:1px solid var(--line-dark);
+  border-bottom:1px solid var(--line-dark);
+}
+.process-item:last-child{border-right:none;}
+.process-num{
+  font-family:'Oswald',sans-serif;font-size:14px;color:var(--red);
+  margin-bottom:14px;
+}
+.process-item h3{
+  font-size:19px;font-weight:500;margin-bottom:10px;
+}
+.process-item p{
+  font-family:'Inter',sans-serif;font-size:14px;color:var(--steel-light);
+  line-height:1.55;margin:0;
+}
+
+/* ---------- MATERIALS / COLOR RANGE ---------- */
+.range{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:56px;
+  align-items:center;
+}
+.range-copy p{
+  font-family:'Inter',sans-serif;color:var(--steel-light);
+  line-height:1.65;font-size:15px;margin-top:16px;max-width:44ch;
+}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.chip{
+  display:flex;align-items:center;gap:10px;
+  border:1px solid var(--line-dark);
+  padding:8px 14px 8px 8px;
+  font-family:'Inter',sans-serif;font-size:13px;
+}
+.swatch{width:22px;height:22px;flex:0 0 auto;}
+.range-photo{
+  aspect-ratio:4/5;overflow:hidden;
+}
+.range-photo img{width:100%;height:100%;object-fit:cover;}
+
+/* ---------- STRIP GALLERY (secondary) ---------- */
+.strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  background:var(--ink);
+}
+.strip a, .strip .cell{display:block;aspect-ratio:1/1;overflow:hidden;position:relative;}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.strip .cell:hover img{transform:scale(1.06);}
+
+/* ---------- CONTACT / FOOTER ---------- */
+.contact{
+  background:var(--ink);color:var(--paper);
+  padding:80px 0 32px;
+}
+.contact-top{
+  display:grid;grid-template-columns:1.3fr 1fr;gap:48px;
+  padding-bottom:56px;border-bottom:1px solid var(--line);
+}
+.contact-top h2{
+  font-size:clamp(30px,4.6vw,48px);font-weight:600;
+  max-width:13ch;
+  color:var(--paper);
+}
+.contact-top .lede{
+  font-family:'Inter',sans-serif;color:rgba(242,237,227,0.65);
+  margin-top:16px;font-size:15px;line-height:1.6;max-width:42ch;
+}
+.contact-actions{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+.contact-details{display:flex;flex-direction:column;gap:22px;justify-content:center;}
+.contact-details .row{border-top:1px solid var(--line);padding-top:14px;}
+.contact-details .row:first-child{border-top:none;padding-top:0;}
+.contact-details .label{font-size:12px;color:rgba(242,237,227,0.5);margin-bottom:6px;}
+.contact-details .value{font-family:'Oswald',sans-serif;font-size:19px;font-weight:500;text-transform:none;}
+.contact-details a.value{text-decoration:none;}
+.contact-details a.value:hover{color:var(--gold);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:28px;flex-wrap:wrap;gap:12px;
+}
+.footer-bottom img{height:26px;filter:brightness(0) invert(1);opacity:.85;}
+.footer-bottom .fine{font-size:12.5px;color:rgba(242,237,227,0.45);}
+
+/* ---------- MOBILE ---------- */
+@media (max-width:860px){
+  .process-list{grid-template-columns:1fr 1fr;}
+  .process-item{padding:22px 16px 22px 0;}
+  .process-item:nth-child(2){border-right:none;}
+  .range{grid-template-columns:1fr;gap:32px;}
+  .range-photo{order:-1;}
+  .strip{grid-template-columns:repeat(3,1fr);}
+  .contact-top{grid-template-columns:1fr;gap:32px;}
+}
+@media (max-width:560px){
+  .process-list{grid-template-columns:1fr;}
+  .process-item{border-right:none !important;padding:20px 0;}
+  .hero-inner{padding:130px 20px 48px;}
+  .hero-meta{gap:24px;}
+  .section{padding:60px 0;}
+  .nav .logo-mark{height:26px;}
+}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .slide img, .strip img{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <img class="logo-mark" src="images/photo-1.png" alt="2M for Treatment and Painting">
+  <div class="nav-cta">
+    <a class="btn btn-ghost" href="tel:+201281111294">Call us</a>
+    <a class="btn btn-primary" href="https://wa.me/2001225553528?text=Hello!%20Anyone%20available%20to%20help%20%3F%20" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero" style="--hero-img:url('images/photo-2.jpg')">
+  <div class="hero-bg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="eyebrow-line"><span class="rule"></span>2M for Treatment and Painting</div>
+    <h1>Steel finished right, <em>from bare metal to final coat.</em></h1>
+    <p class="lede">Sandblasting, surface preparation and electrostatic powder coating for structural and architectural steel — built to run at production scale, finished to a showroom standard.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">See our work</a>
+      <a class="btn btn-ghost" href="#contact">Get a quote</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>Treating / Cleaning→ Prime → Coat → Cure</strong>full in-house process, one facility</div>
+      <div><strong>Custom color match</strong>gloss, matte and metallic finishes</div>
+      <div><strong>Fabrication-ready</strong>kiosks, enclosures, gates &amp; structural steel</div>
+    </div>
+  </div>
+</header>
+
+<section class="carousel-section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>From the floor</h2>
+      <p>Work moving through the shop right now — the coating booth, and finished pieces ready to ship.</p>
+    </div>
+  </div>
+  <div class="carousel-outer">
+    <div class="carousel" id="carousel">
+      <div class="slide">
+        <img src="images/photo-3.jpg" alt="Powder-coated frame — signal red" loading="eager">
+        <div class="slide-cap"><span>Powder-coated frame — signal red</span><span class="idx">01/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-4.jpg" alt="Red gloss finish, corner detail" loading="eager">
+        <div class="slide-cap"><span>Red gloss finish, corner detail</span><span class="idx">02/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-5.jpg" alt="Raw fabrication, enclosure frame" loading="lazy">
+        <div class="slide-cap"><span>Raw fabrication, enclosure frame</span><span class="idx">03/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-6.jpg" alt="Weld prep before coating" loading="lazy">
+        <div class="slide-cap"><span>Weld prep before coating</span><span class="idx">04/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-7.jpg" alt="Gloss black finish, panel set" loading="lazy">
+        <div class="slide-cap"><span>Gloss black finish, panel set</span><span class="idx">05/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-8.jpg" alt="Brass gold, decorative steelwork" loading="lazy">
+        <div class="slide-cap"><span>Brass gold, decorative steelwork</span><span class="idx">06/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-9.jpg" alt="Inside the coating booth" loading="lazy">
+        <div class="slide-cap"><span>Inside the coating booth</span><span class="idx">07/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-10.jpg" alt="Coated profiles, ready to ship" loading="lazy">
+        <div class="slide-cap"><span>Coated profiles, ready to ship</span><span class="idx">08/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-11.jpg" alt="Finished product, studio shot" loading="lazy">
+        <div class="slide-cap"><span>Finished product, studio shot</span><span class="idx">09/10</span></div>
+      </div>
+      <div class="slide">
+        <img src="images/photo-12.jpg" alt="Warm ivory finish, panel detail" loading="lazy">
+        <div class="slide-cap"><span>Warm ivory finish, panel detail</span><span class="idx">10/10</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="carousel-controls">
+      <div class="dots" id="dots"></div>
+      <div class="arrows">
+        <button class="arrow-btn" id="prevBtn" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="arrow-btn" id="nextBtn" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How a piece moves through</h2>
+      <p>The same sequence whether it's one bracket or a full production batch.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <h3>Treating / Cleaning &amp; prep</h3>
+        <p>Every seam is carfully cleaned and treated from any rust before it goes anywhere near paint.</p>
+      </div>
+  
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <h3>Electrostatic coating</h3>
+        <p>Powder is applied by electrostatic gun for even coverage, including corners and returns.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <h3>Cure, inspect &amp; ship</h3>
+        <p>Oven-cured, checked for finish and coverage, then packed for delivery or site install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" style="padding-top:0;">
+  <div class="wrap">
+    <div class="range">
+      <div class="range-copy">
+        <h2>Any color, one finish quality</h2>
+        <p>Reds, blacks, brass and gold tones, warm ivories, grays and a collection of rare colors — matched to spec and coated to the same standard whether it's one bracket or a full production run.</p>
+        <div class="chips">
+          <div class="chip"><span class="swatch" style="background:#b8291a"></span>Signal red</div>
+          <div class="chip"><span class="swatch" style="background:#141414"></span>Gloss black</div>
+          <div class="chip"><span class="swatch" style="background:#a8813f"></span>Brass gold</div>
+          <div class="chip"><span class="swatch" style="background:#efe9da;border:1px solid #ddd6c4"></span>Warm ivory</div>
+          <div class="chip"><span class="swatch" style="background:#8a8d90"></span>Steel gray</div>
+        </div>
+      </div>
+      <div class="range-photo">
+        <img src="images/photo-13.jpg" alt="Gold powder-coated decorative steelwork detail" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip reveal">
+  <div class="cell"><img src="images/photo-14.jpg" alt="Raw fabrication, enclosure frame" loading="lazy"></div>
+  <div class="cell"><img src="images/photo-15.jpg" alt="Coated profiles, ready to ship" loading="lazy"></div>
+  <div class="cell"><img src="images/photo-16.jpg" alt="Finished product, studio shot" loading="lazy"></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-top">
+      <div>
+        <h2>Bring us the steel. We'll bring the finish.</h2>
+        <p class="lede">Reach out with drawings, quantities or just a photo of what you're working with — we'll quote sandblasting, priming and powder coating for it.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://wa.me/2001225553528?text=Hello!%20Anyone%20available%20to%20help%20%3F%20" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:2mfortreatment23@gmail.com">Email us</a>
+        </div>
+      </div>
+      <div class="contact-details">
+        <div class="row">
+          <div class="label">Phone</div>
+          <a class="value" href="tel:+201281111294">01281111294, </a>
+          <a class="value" href="tel:+201281111295">01281111295, </a>
+          <a class="value" href="tel:+201227839730">01227839730, </a>
+          <a class="value" href="tel:+201225553528">01225553528, </a>
+        </div>
+        <div class="row">
+          <div class="label">Email</div>
+          <a class="value" href="mailto:info@2mtreatment.com">2mfortreatment23@gmail.com</a>
+        </div>
+        <div class="row">
+          <div class="label">Workshop</div>
+          <div class="value">Cairo, Egypt</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/photo-17.png" alt="2M for Treatment and Painting">
+      <div class="fine">© 2026 2M for Treatment and Painting. All rights reserved.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+// nav solid on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 40);
+}, {passive:true});
+
+// reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ---- Carousel ----
+const track = document.getElementById('carousel');
+const slides = Array.from(track.children);
+const dotsWrap = document.getElementById('dots');
+slides.forEach((_,i)=>{
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0 ? ' active':'');
+  d.addEventListener('click', ()=> scrollToSlide(i));
+  dotsWrap.appendChild(d);
+});
+const dots = Array.from(dotsWrap.children);
+
+function slideWidth(){
+  return slides[0].getBoundingClientRect().width + 16; // gap
+}
+function currentIndex(){
+  return Math.round(track.scrollLeft / slideWidth());
+}
+function scrollToSlide(i){
+  i = Math.max(0, Math.min(slides.length-1, i));
+  track.scrollTo({left: i*slideWidth(), behavior:'smooth'});
+}
+function updateDots(){
+  const i = currentIndex();
+  dots.forEach((d,idx)=> d.classList.toggle('active', idx===i));
+}
+let dotTick;
+track.addEventListener('scroll', ()=>{
+  clearTimeout(dotTick);
+  dotTick = setTimeout(updateDots, 80);
+},{passive:true});
+
+document.getElementById('prevBtn').addEventListener('click', ()=> scrollToSlide(currentIndex()-1));
+document.getElementById('nextBtn').addEventListener('click', ()=> scrollToSlide(currentIndex()+1));
+
+// autoplay
+let autoplay = setInterval(advance, 3600);
+function advance(){
+  const next = currentIndex()+1;
+  if(next >= slides.length){ track.scrollTo({left:0, behavior:'smooth'}); }
+  else{ scrollToSlide(next); }
+}
+function pause(){ clearInterval(autoplay); }
+function resume(){ clearInterval(autoplay); autoplay = setInterval(advance, 3600); }
+track.addEventListener('mouseenter', pause);
+track.addEventListener('mouseleave', resume);
+track.addEventListener('touchstart', pause, {passive:true});
+track.addEventListener('touchend', resume, {passive:true});
+track.addEventListener('pointerdown', pause);
+window.addEventListener('pointerup', resume);
+
+// keyboard
+track.setAttribute('tabindex','0');
+track.addEventListener('keydown', (e)=>{
+  if(e.key==='ArrowRight') scrollToSlide(currentIndex()+1);
+  if(e.key==='ArrowLeft') scrollToSlide(currentIndex()-1);
+});
+</script>
+</body>
+</html>
