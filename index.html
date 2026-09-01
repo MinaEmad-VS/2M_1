@@ -295,6 +295,10 @@ img{display:block;max-width:100%;}
 .contact-details .value{font-family:'Oswald',sans-serif;font-size:19px;font-weight:500;text-transform:none;}
 .contact-details a.value{text-decoration:none;}
 .contact-details a.value:hover{color:var(--gold);}
+.social-links{display:flex;gap:14px;flex-wrap:wrap;}
+.social-link{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:500;color:var(--paper);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:border-color .2s ease,background .2s ease,color .2s ease;}
+.social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(242,237,227,0.06);}
+.social-link svg{flex-shrink:0;}
 .footer-bottom{
   display:flex;justify-content:space-between;align-items:center;
   padding-top:28px;flex-wrap:wrap;gap:12px;
@@ -506,6 +510,19 @@ img{display:block;max-width:100%;}
         <div class="row">
           <div class="label">Workshop</div>
           <div class="value">Cairo, Egypt</div>
+        </div>
+        <div class="row">
+          <div class="label">Follow us</div>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/2mfortreatment/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@2mfortreatment?_r=1&_t=ZS-99MiYGReexk" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.6 3h-3.2v12.4a2.9 2.9 0 1 1-2.05-2.77v-3.28a6.1 6.1 0 1 0 5.25 6.05V9.1a7.6 7.6 0 0 0 4.4 1.4V7.3a4.4 4.4 0 0 1-4.4-4.3Z"/></svg>
+              <span>TikTok</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
